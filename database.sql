@@ -15,7 +15,7 @@ SET search_path = public, pg_catalog;
 -- Data for Name: auth_group; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY auth_group (id, name) FROM stdin;
+\COPY auth_group (id, name) FROM stdin;
 1	Moderators
 2	Editors
 \.
@@ -32,7 +32,7 @@ SELECT pg_catalog.setval('auth_group_id_seq', 2, true);
 -- Data for Name: django_content_type; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY django_content_type (id, app_label, model) FROM stdin;
+\COPY django_content_type (id, app_label, model) FROM stdin;
 1	wagtailcore	page
 2	wagtailimages	image
 3	home	homepage
@@ -86,7 +86,7 @@ COPY django_content_type (id, app_label, model) FROM stdin;
 -- Data for Name: auth_permission; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY auth_permission (id, name, content_type_id, codename) FROM stdin;
+\COPY auth_permission (id, name, content_type_id, codename) FROM stdin;
 1	Can add image	2	add_image
 2	Can change image	2	change_image
 3	Can delete image	2	delete_image
@@ -230,7 +230,7 @@ COPY auth_permission (id, name, content_type_id, codename) FROM stdin;
 -- Data for Name: auth_group_permissions; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY auth_group_permissions (id, group_id, permission_id) FROM stdin;
+\COPY auth_group_permissions (id, group_id, permission_id) FROM stdin;
 1	1	1
 2	1	2
 3	1	3
@@ -266,7 +266,7 @@ SELECT pg_catalog.setval('auth_permission_id_seq', 136, true);
 -- Data for Name: customuser_user; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY customuser_user (id, password, last_login, is_superuser, email, is_staff, is_active, date_joined, last_name, first_name) FROM stdin;
+\COPY customuser_user (id, password, last_login, is_superuser, email, is_staff, is_active, date_joined, last_name, first_name) FROM stdin;
 1	pbkdf2_sha256$20000$luSWC5bi3pMR$CT2rupYonNZn7N81Xk+i8NB2oGzBdblpr7GCkZW+CS0=	2015-08-10 19:49:45.910943-07	t	taedori@outlook.com	t	t	2015-08-10 19:49:39.078792-07		
 \.
 
@@ -275,7 +275,7 @@ COPY customuser_user (id, password, last_login, is_superuser, email, is_staff, i
 -- Data for Name: customuser_user_groups; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY customuser_user_groups (id, user_id, group_id) FROM stdin;
+\COPY customuser_user_groups (id, user_id, group_id) FROM stdin;
 \.
 
 
@@ -297,7 +297,7 @@ SELECT pg_catalog.setval('customuser_user_id_seq', 1, true);
 -- Data for Name: customuser_user_user_permissions; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY customuser_user_user_permissions (id, user_id, permission_id) FROM stdin;
+\COPY customuser_user_user_permissions (id, user_id, permission_id) FROM stdin;
 \.
 
 
@@ -312,7 +312,7 @@ SELECT pg_catalog.setval('customuser_user_user_permissions_id_seq', 1, false);
 -- Data for Name: django_admin_log; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY django_admin_log (id, action_time, object_id, object_repr, action_flag, change_message, content_type_id, user_id) FROM stdin;
+\COPY django_admin_log (id, action_time, object_id, object_repr, action_flag, change_message, content_type_id, user_id) FROM stdin;
 \.
 
 
@@ -334,7 +334,7 @@ SELECT pg_catalog.setval('django_content_type_id_seq', 46, true);
 -- Data for Name: django_migrations; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY django_migrations (id, app, name, applied) FROM stdin;
+\COPY django_migrations (id, app, name, applied) FROM stdin;
 1	contenttypes	0001_initial	2015-08-10 19:48:23.738797-07
 2	contenttypes	0002_remove_content_type_name	2015-08-10 19:48:23.764318-07
 3	auth	0001_initial	2015-08-10 19:48:23.868094-07
@@ -405,7 +405,7 @@ SELECT pg_catalog.setval('django_migrations_id_seq', 56, true);
 -- Data for Name: django_session; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY django_session (session_key, session_data, expire_date) FROM stdin;
+\COPY django_session (session_key, session_data, expire_date) FROM stdin;
 9lszwua5921xuc0u0dagzy3j8lucbril	M2MyMmQ0MjAyZjUwYjZjYzQxYzU0YzI3ZWZiZTdlZGM1MTg2ODU5Mzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9oYXNoIjoiZjBlNWRiMTI2MTFjOWU1MWEzODBjODYzNjAyY2NjYjI3NTUwZGNhYSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=	2015-08-24 19:49:45.918854-07
 \.
 
@@ -414,7 +414,7 @@ COPY django_session (session_key, session_data, expire_date) FROM stdin;
 -- Data for Name: easy_thumbnails_source; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY easy_thumbnails_source (id, storage_hash, name, modified) FROM stdin;
+\COPY easy_thumbnails_source (id, storage_hash, name, modified) FROM stdin;
 \.
 
 
@@ -429,7 +429,7 @@ SELECT pg_catalog.setval('easy_thumbnails_source_id_seq', 1, false);
 -- Data for Name: easy_thumbnails_thumbnail; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY easy_thumbnails_thumbnail (id, storage_hash, name, modified, source_id) FROM stdin;
+\COPY easy_thumbnails_thumbnail (id, storage_hash, name, modified, source_id) FROM stdin;
 \.
 
 
@@ -444,7 +444,7 @@ SELECT pg_catalog.setval('easy_thumbnails_thumbnail_id_seq', 1, false);
 -- Data for Name: easy_thumbnails_thumbnaildimensions; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY easy_thumbnails_thumbnaildimensions (id, thumbnail_id, width, height) FROM stdin;
+\COPY easy_thumbnails_thumbnaildimensions (id, thumbnail_id, width, height) FROM stdin;
 \.
 
 
@@ -459,7 +459,7 @@ SELECT pg_catalog.setval('easy_thumbnails_thumbnaildimensions_id_seq', 1, false)
 -- Data for Name: wagtailcore_page; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY wagtailcore_page (id, path, depth, numchild, title, slug, live, has_unpublished_changes, url_path, seo_title, show_in_menus, search_description, go_live_at, expire_at, expired, content_type_id, owner_id, locked, latest_revision_created_at, first_published_at) FROM stdin;
+\COPY wagtailcore_page (id, path, depth, numchild, title, slug, live, has_unpublished_changes, url_path, seo_title, show_in_menus, search_description, go_live_at, expire_at, expired, content_type_id, owner_id, locked, latest_revision_created_at, first_published_at) FROM stdin;
 1	0001	1	1	Root	root	t	f	/		f		\N	\N	f	1	\N	f	\N	\N
 3	00010001	2	1	Homepage	home	t	f	/home/		t		\N	\N	f	3	\N	f	2015-08-10 19:50:50.92363-07	2015-08-10 19:50:51.003812-07
 4	000100010001	3	2	About	about	t	f	/home/about/		t		\N	\N	f	17	1	f	2015-08-10 20:54:25.952564-07	2015-08-10 19:53:09.329053-07
@@ -472,7 +472,7 @@ COPY wagtailcore_page (id, path, depth, numchild, title, slug, live, has_unpubli
 -- Data for Name: wagtailimages_image; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY wagtailimages_image (id, title, file, width, height, created_at, focal_point_x, focal_point_y, focal_point_width, focal_point_height, uploaded_by_user_id) FROM stdin;
+\COPY wagtailimages_image (id, title, file, width, height, created_at, focal_point_x, focal_point_y, focal_point_width, focal_point_height, uploaded_by_user_id) FROM stdin;
 1	about-tyndale-image	original_images/William-Tyndale_620_osLvvgM.jpg	749	300	2015-08-10 19:52:48.863491-07	\N	\N	\N	\N	1
 2	frank	original_images/Frank_nvPgmuJ.png	342	480	2015-08-10 21:18:03.215028-07	\N	\N	\N	\N	1
 3	daniel	original_images/Daniel-342x480_SesDSvc.png	342	478	2015-08-10 21:19:53.507672-07	\N	\N	\N	\N	1
@@ -483,7 +483,7 @@ COPY wagtailimages_image (id, title, file, width, height, created_at, focal_poin
 -- Data for Name: home_aboutpage; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY home_aboutpage (page_ptr_id, subsection_title, subsection_subtitle, body, main_image_id) FROM stdin;
+\COPY home_aboutpage (page_ptr_id, subsection_title, subsection_subtitle, body, main_image_id) FROM stdin;
 4	About	About William Tyndale and YALA Mission	<p>  <strong>William Tyndale</strong> (/ˈtɪndəl/;[1] sometimes spelled Tynsdale, Tindall, Tindill, Tyndall; c. 1494–1536) was an English scholar who became a leading figure in Protestant reform in the years leading up to his execution. He is well known for his translation of the Bible into English. He was influenced by the work of Desiderius Erasmus, who made the Greek New Testament available in Europe, and by Martin Luther.[2] While a number of partial translations had been made from the seventh century onward, the spread of Wycliffe's Bible resulted in a death sentence for any unlicensed possession of Scripture in English—even though translations in all other major European languages had been accomplished and made available.[3][4] Tyndale's translation was the first English Bible to draw directly from Hebrew and Greek texts, the first English one to take advantage of the printing press, and first of the new English Bibles of the Reformation. It was taken to be a direct challenge to the hegemony of both the Roman Catholic Church and the laws of England to maintain the church's position. In 1530, Tyndale also wrote The Practyse of Prelates, opposing Henry VIII's divorce from Catherine of Aragon on the grounds that it contravened Scripture.Reuchlin's Hebrew grammar was published in 1506. Tyndale worked in an age in which Greek was available to the European scholarly community for the first time in centuries. Erasmus compiled and edited Greek Scriptures into the Textus Receptus—ironically, to improve upon the Latin Vulgate—following the Renaissance-fueling Fall of Constantinople in 1453 and the dispersion of Greek-speaking intellectuals and texts into a Europe which previously had access to none. When a copy of The Obedience of a Christian Man fell into the hands of Henry VIII, the king found the rationale to break the Church in England from the Roman Catholic Church in 1534.[5][6][page needed]In 1535, Tyndale was arrested and jailed in the castle of Vilvoorde (Filford) outside Brussels for over a year. In 1536 he was convicted of heresy and executed by strangulation, after which his body was burnt at the stake. His dying prayer that the King of England's eyes would be opened seemed to find its fulfillment just two years later with Henry's authorization of The Great Bible for the Church of England—which was largely Tyndale's own work. Hence, the Tyndale Bible, as it was known, continued to play a key role in spreading Reformation ideas across the English-speaking world and, eventually, to the British Empire.In 1611, the 54 scholars who produced the King James Bible drew significantly from Tyndale, as well as from translations that descended from his. One estimate suggests the New Testament in the King James Version is 83% Tyndale's and the Old Testament 76%.[7] With his translation of the Bible the first to be printed in English, and a model for subsequent English translations, in 2002, Tyndale was placed at number 26 in the BBC's poll of the 100 Greatest Britons.[8][9]<br/><br/>-from Wikipedia<br/></p>	1
 \.
 
@@ -492,7 +492,7 @@ COPY home_aboutpage (page_ptr_id, subsection_title, subsection_subtitle, body, m
 -- Data for Name: home_academicpage; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY home_academicpage (page_ptr_id, subsection_title, subsection_subtitle, body, main_image_id) FROM stdin;
+\COPY home_academicpage (page_ptr_id, subsection_title, subsection_subtitle, body, main_image_id) FROM stdin;
 \.
 
 
@@ -500,7 +500,7 @@ COPY home_academicpage (page_ptr_id, subsection_title, subsection_subtitle, body
 -- Data for Name: home_academicprogrampage; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY home_academicprogrampage (page_ptr_id, subsection_title, subsection_subtitle) FROM stdin;
+\COPY home_academicprogrampage (page_ptr_id, subsection_title, subsection_subtitle) FROM stdin;
 \.
 
 
@@ -508,7 +508,7 @@ COPY home_academicprogrampage (page_ptr_id, subsection_title, subsection_subtitl
 -- Data for Name: home_academicprograms; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY home_academicprograms (id, program_name, program_description) FROM stdin;
+\COPY home_academicprograms (id, program_name, program_description) FROM stdin;
 \.
 
 
@@ -523,7 +523,7 @@ SELECT pg_catalog.setval('home_academicprograms_id_seq', 1, false);
 -- Data for Name: home_adjunctprofessor; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY home_adjunctprofessor (id, professor_name, professor_spec, professor_course, professor_image_id) FROM stdin;
+\COPY home_adjunctprofessor (id, professor_name, professor_spec, professor_course, professor_image_id) FROM stdin;
 \.
 
 
@@ -538,7 +538,7 @@ SELECT pg_catalog.setval('home_adjunctprofessor_id_seq', 1, false);
 -- Data for Name: home_admissionpage; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY home_admissionpage (page_ptr_id, subsection_title, subsection_subtitle, body, main_image_id) FROM stdin;
+\COPY home_admissionpage (page_ptr_id, subsection_title, subsection_subtitle, body, main_image_id) FROM stdin;
 \.
 
 
@@ -546,7 +546,7 @@ COPY home_admissionpage (page_ptr_id, subsection_title, subsection_subtitle, bod
 -- Data for Name: home_chairmanpage; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY home_chairmanpage (page_ptr_id, subsection_title, subsection_subtitle, chairman_name, chairman_title, body, chairman_image_id) FROM stdin;
+\COPY home_chairmanpage (page_ptr_id, subsection_title, subsection_subtitle, chairman_name, chairman_title, body, chairman_image_id) FROM stdin;
 6	Chairman’s Welcome	Welcome message from TIU's Chairman	Daniel C. Ji, D.R.E., Th.D.	Chairman	<p>Dear Friends,<br/>    Tyndale International University was established based upon Reformed Calvinism and faith based on conservative teaching. We are commissioned to foster and produce faithful and truthful leaders in our societies and churches. In this diversified generation, we can't speak enough of how crucial and significant education is.<br/>    Education is a tool/instrument that helps us to realize, develop, and improve our individual talents that God has bestowed upon us. And the ultimate goal for the education is to become somebody who is needed and important. Additionally, we all have a privilege and right to be educated.<br/>    Tyndale International University exists for that particular purpose and aim. This is an education that advances and moves forward from Christian mind to conservative Reformed Calvinism grounded on theology and faith derived from the Scriptures. I, this nation, and this generation will labor and toil as the lighthouse that shines the light in this world and as the salt that protects the world from deteriorating and decaying.<br/>    Tyndale International University will eagerly assist and contribute to those who passionately longing for education but are unable to pursue their goals due to their jobs and/or environmental situations they are in. We plan to have night classes and other ways/methods to help them accomplish their dreams.<br/>    ''Do your best to present yourself to God as one approved, a worker who has no need to be ashamed, rightly handling  the word of truth.'' (2 Tim. 2:15).<br/><br/>Sincerely,<br/></p>	3
 \.
 
@@ -555,7 +555,7 @@ COPY home_chairmanpage (page_ptr_id, subsection_title, subsection_subtitle, chai
 -- Data for Name: home_contactpage; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY home_contactpage (page_ptr_id, to_address, from_address, subject, contact_header, contact_subheader, thank_you_text) FROM stdin;
+\COPY home_contactpage (page_ptr_id, to_address, from_address, subject, contact_header, contact_subheader, thank_you_text) FROM stdin;
 \.
 
 
@@ -563,7 +563,7 @@ COPY home_contactpage (page_ptr_id, to_address, from_address, subject, contact_h
 -- Data for Name: home_course; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY home_course (id, course_name) FROM stdin;
+\COPY home_course (id, course_name) FROM stdin;
 \.
 
 
@@ -578,7 +578,7 @@ SELECT pg_catalog.setval('home_course_id_seq', 1, false);
 -- Data for Name: home_facultypage; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY home_facultypage (page_ptr_id, subsection_title, subsection_subtitle, tab_title_1, tab_title_2) FROM stdin;
+\COPY home_facultypage (page_ptr_id, subsection_title, subsection_subtitle, tab_title_1, tab_title_2) FROM stdin;
 \.
 
 
@@ -586,7 +586,7 @@ COPY home_facultypage (page_ptr_id, subsection_title, subsection_subtitle, tab_t
 -- Data for Name: home_faithpage; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY home_faithpage (page_ptr_id, subsection_title, subsection_subtitle, body, main_image_id) FROM stdin;
+\COPY home_faithpage (page_ptr_id, subsection_title, subsection_subtitle, body, main_image_id) FROM stdin;
 \.
 
 
@@ -594,7 +594,7 @@ COPY home_faithpage (page_ptr_id, subsection_title, subsection_subtitle, body, m
 -- Data for Name: home_formfield; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY home_formfield (id, sort_order, label, field_type, required, choices, default_value, help_text, page_id) FROM stdin;
+\COPY home_formfield (id, sort_order, label, field_type, required, choices, default_value, help_text, page_id) FROM stdin;
 \.
 
 
@@ -609,7 +609,7 @@ SELECT pg_catalog.setval('home_formfield_id_seq', 1, false);
 -- Data for Name: home_homepage; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY home_homepage (page_ptr_id, main_header, main_subheader, slider1_header1, slider1_header2, slider1_subheader1, slider2_header1, slider2_subheader1) FROM stdin;
+\COPY home_homepage (page_ptr_id, main_header, main_subheader, slider1_header1, slider1_header2, slider1_subheader1, slider2_header1, slider2_subheader1) FROM stdin;
 3	our mission	Preparing students to serve Christ and his church through biblical, experiential, and practical ministry	Welcome to	Tyndale international university	The reformed theology based seminary	DO YOUR BEST TO PRESENT YOURSELF TO GOD AS ONE APPROVED, A WORKER WHO HAS NO NEED TO BE ASHAMED, RIGHTLY HANDLING THE WORD OF TRUTH	2 Timothy 2 : 15
 \.
 
@@ -618,7 +618,7 @@ COPY home_homepage (page_ptr_id, main_header, main_subheader, slider1_header1, s
 -- Data for Name: home_missionpage; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY home_missionpage (page_ptr_id, subsection_title, subsection_subtitle, body, main_image_id) FROM stdin;
+\COPY home_missionpage (page_ptr_id, subsection_title, subsection_subtitle, body, main_image_id) FROM stdin;
 \.
 
 
@@ -626,7 +626,7 @@ COPY home_missionpage (page_ptr_id, subsection_title, subsection_subtitle, body,
 -- Data for Name: home_presidentpage; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY home_presidentpage (page_ptr_id, subsection_title, subsection_subtitle, president_name, president_title, body, president_image_id) FROM stdin;
+\COPY home_presidentpage (page_ptr_id, subsection_title, subsection_subtitle, president_name, president_title, body, president_image_id) FROM stdin;
 5	President's Welcome	Welcome message from TIU's President	Frank J. Smith, Ph.D., D.D.	President	<p>Dear Student:<br/>    As President of Tyndale International University, I greet you in the name of the Lord Jesus Christ. He is King of kings and Lord of lords, and in Him are found all the treasures of God. The Apostle Paul reminds us He must have the preeminence, and by Him all things consist. These truths have profound implications for education, since we know from the book of Proverbs that the fear of the Lord is the beginning of both knowledge and wisdom.<br/>    At Tyndale International University, we seek to bring all thoughts captive to the Lordship of Christ. This educational approach is what is referred to as a Christian world-and-life view. Not every institution that identifies itself as Christian understands this perspective. What you will discover at Tyndale International University therefore is rare--an institution of higher learning that starts with the wisdom of God as recorded in His Word, the Bible, and which builds on that infallible foundation.<br/>    We are far from perfect, of course, in our understanding and in our application of that knowledge. Nevertheless, we are sincere in our endeavor. And we invite you to join us in this great enterprise.<br/><br/>Sincerely,<br/></p>	2
 \.
 
@@ -635,7 +635,7 @@ COPY home_presidentpage (page_ptr_id, subsection_title, subsection_subtitle, pre
 -- Data for Name: home_professor; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY home_professor (id, professor_name, professor_spec, course_id, professor_image_id) FROM stdin;
+\COPY home_professor (id, professor_name, professor_spec, course_id, professor_image_id) FROM stdin;
 \.
 
 
@@ -650,7 +650,7 @@ SELECT pg_catalog.setval('home_professor_id_seq', 1, false);
 -- Data for Name: home_staffpage; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY home_staffpage (page_ptr_id, subsection_title, subsection_subtitle, first_column_header, first_column_name, first_column_position, first_column_spec, second_column_header, second_column_name, second_column_position, second_column_spec, third_column_header, third_column_name, third_column_position, fourth_column_header, fourth_column_name, fourth_column_position, fifth_column_header, fifth_column_name, fifth_column_position, fifth_column_image_id, first_column_image_id, fourth_column_image_id, second_column_image_id, third_column_image_id) FROM stdin;
+\COPY home_staffpage (page_ptr_id, subsection_title, subsection_subtitle, first_column_header, first_column_name, first_column_position, first_column_spec, second_column_header, second_column_name, second_column_position, second_column_spec, third_column_header, third_column_name, third_column_position, fourth_column_header, fourth_column_name, fourth_column_position, fifth_column_header, fifth_column_name, fifth_column_position, fifth_column_image_id, first_column_image_id, fourth_column_image_id, second_column_image_id, third_column_image_id) FROM stdin;
 \.
 
 
@@ -658,7 +658,7 @@ COPY home_staffpage (page_ptr_id, subsection_title, subsection_subtitle, first_c
 -- Data for Name: profiles_profile; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY profiles_profile (user_id, slug, picture, bio, email_verified) FROM stdin;
+\COPY profiles_profile (user_id, slug, picture, bio, email_verified) FROM stdin;
 1	5e63dee9-2795-467d-a10a-476171a3275e		\N	f
 \.
 
@@ -667,7 +667,7 @@ COPY profiles_profile (user_id, slug, picture, bio, email_verified) FROM stdin;
 -- Data for Name: taggit_tag; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY taggit_tag (id, name, slug) FROM stdin;
+\COPY taggit_tag (id, name, slug) FROM stdin;
 \.
 
 
@@ -682,7 +682,7 @@ SELECT pg_catalog.setval('taggit_tag_id_seq', 1, false);
 -- Data for Name: taggit_taggeditem; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY taggit_taggeditem (id, object_id, content_type_id, tag_id) FROM stdin;
+\COPY taggit_taggeditem (id, object_id, content_type_id, tag_id) FROM stdin;
 \.
 
 
@@ -697,7 +697,7 @@ SELECT pg_catalog.setval('taggit_taggeditem_id_seq', 1, false);
 -- Data for Name: wagtailcore_grouppagepermission; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY wagtailcore_grouppagepermission (id, permission_type, group_id, page_id) FROM stdin;
+\COPY wagtailcore_grouppagepermission (id, permission_type, group_id, page_id) FROM stdin;
 1	add	1	1
 2	edit	1	1
 3	publish	1	1
@@ -725,7 +725,7 @@ SELECT pg_catalog.setval('wagtailcore_page_id_seq', 6, true);
 -- Data for Name: wagtailcore_pagerevision; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY wagtailcore_pagerevision (id, submitted_for_moderation, created_at, content_json, approved_go_live_at, page_id, user_id) FROM stdin;
+\COPY wagtailcore_pagerevision (id, submitted_for_moderation, created_at, content_json, approved_go_live_at, page_id, user_id) FROM stdin;
 1	f	2015-08-10 19:50:50.92363-07	{"first_published_at": null, "slider1_subheader1": "The reformed theology based seminary", "slider2_subheader1": "2 Timothy 2 : 15", "locked": false, "search_description": "", "title": "Homepage", "go_live_at": null, "main_header": "our mission", "seo_title": "", "url_path": "/home/", "numchild": 0, "slider1_header2": "Tyndale international university", "owner": null, "pk": 3, "content_type": 3, "show_in_menus": true, "depth": 2, "has_unpublished_changes": false, "live": true, "main_subheader": "Preparing students to serve Christ and his church through biblical, experiential, and practical ministry", "expired": false, "expire_at": null, "slider2_header1": "DO YOUR BEST TO PRESENT YOURSELF TO GOD AS ONE APPROVED, A WORKER WHO HAS NO NEED TO BE ASHAMED, RIGHTLY HANDLING THE WORD OF TRUTH", "slider1_header1": "Welcome to", "path": "00010001", "slug": "home", "latest_revision_created_at": null}	\N	3	1
 2	f	2015-08-10 19:53:09.255121-07	{"first_published_at": null, "body": "<p>\\u00a0\\u00a0<strong>William Tyndale</strong>\\u00a0(/\\u02c8t\\u026and\\u0259l/;[1]\\u00a0sometimes spelled\\u00a0Tynsdale,\\u00a0Tindall,\\u00a0Tindill,\\u00a0Tyndall; c. 1494\\u20131536) was an English scholar who became a leading figure in Protestant reform in the years leading up to his execution. He is well known for his translation of the\\u00a0Bible\\u00a0into\\u00a0English. He was influenced by the work of\\u00a0Desiderius Erasmus, who made the\\u00a0Greek\\u00a0New Testament\\u00a0available in Europe, and by\\u00a0Martin Luther.[2]\\u00a0While a\\u00a0number of partial translations\\u00a0had been made from the seventh century onward, the spread of\\u00a0Wycliffe's Bible\\u00a0resulted in a death sentence for any unlicensed possession of Scripture in English\\u2014even though translations in all other major European languages had been accomplished and made available.[3][4]\\u00a0Tyndale's translation was the first English Bible to draw directly from\\u00a0Hebrew\\u00a0and\\u00a0Greek\\u00a0texts, the first English one to take advantage of the\\u00a0printing press, and first of the new English Bibles of the Reformation. It was taken to be a direct challenge to the hegemony of both the Roman Catholic Church and the laws of\\u00a0England\\u00a0to maintain the church's position. In 1530, Tyndale also wrote\\u00a0The Practyse of Prelates, opposing\\u00a0Henry VIII's divorce from\\u00a0Catherine of Aragon\\u00a0on the grounds that it contravened Scripture.Reuchlin's Hebrew grammar was published in 1506. Tyndale worked in an age in which Greek was available to the European scholarly community for the first time in centuries. Erasmus compiled and edited Greek Scriptures into the\\u00a0Textus Receptus\\u2014ironically, to improve upon the Latin\\u00a0Vulgate\\u2014following the\\u00a0Renaissance-fueling\\u00a0Fall of Constantinople\\u00a0in 1453 and the dispersion of Greek-speaking intellectuals and texts into a Europe which previously had access to none. When a copy of\\u00a0The Obedience of a Christian Man\\u00a0fell into the hands of\\u00a0Henry VIII, the king found the rationale to\\u00a0break the Church in England from the Roman Catholic Church\\u00a0in 1534.[5][6][page\\u00a0needed]In 1535, Tyndale was arrested and jailed in the castle of\\u00a0Vilvoorde\\u00a0(Filford) outside\\u00a0Brussels\\u00a0for over a year. In 1536 he was convicted of\\u00a0heresy\\u00a0and executed by strangulation, after which his body was burnt at the stake. His dying prayer that the King of England's eyes would be opened seemed to find its fulfillment just two years later with Henry's authorization of\\u00a0The Great Bible\\u00a0for the Church of England\\u2014which was largely Tyndale's own work. Hence, the\\u00a0Tyndale Bible, as it was known, continued to play a key role in spreading\\u00a0Reformation\\u00a0ideas across the English-speaking world and, eventually, to the\\u00a0British Empire.In 1611, the 54 scholars who produced the\\u00a0King James Bible\\u00a0drew significantly from Tyndale, as well as from translations that descended from his. One estimate suggests the\\u00a0New Testament\\u00a0in the King James Version is 83% Tyndale's and the\\u00a0Old Testament\\u00a076%.[7]\\u00a0With his translation of the Bible the first to be printed in English, and a model for subsequent English translations, in 2002, Tyndale was placed at number 26 in the BBC's poll of the\\u00a0100 Greatest Britons.[8][9]<br/><br/>-from Wikipedia<br/></p>", "locked": false, "search_description": "", "title": "About", "go_live_at": null, "subsection_title": "About", "seo_title": "", "url_path": "/home/about/", "numchild": 0, "owner": 1, "pk": 4, "content_type": 17, "show_in_menus": false, "depth": 3, "has_unpublished_changes": false, "live": true, "main_image": 1, "expired": false, "expire_at": null, "path": "000100010001", "subsection_subtitle": "About William Tyndale and YALA Mission", "slug": "about", "latest_revision_created_at": null}	\N	4	1
 3	f	2015-08-10 20:54:25.952564-07	{"depth": 3, "seo_title": "", "owner": 1, "title": "About", "body": "<p>\\u00a0\\u00a0<strong>William Tyndale</strong>\\u00a0(/\\u02c8t\\u026and\\u0259l/;[1]\\u00a0sometimes spelled\\u00a0Tynsdale,\\u00a0Tindall,\\u00a0Tindill,\\u00a0Tyndall; c. 1494\\u20131536) was an English scholar who became a leading figure in Protestant reform in the years leading up to his execution. He is well known for his translation of the\\u00a0Bible\\u00a0into\\u00a0English. He was influenced by the work of\\u00a0Desiderius Erasmus, who made the\\u00a0Greek\\u00a0New Testament\\u00a0available in Europe, and by\\u00a0Martin Luther.[2]\\u00a0While a\\u00a0number of partial translations\\u00a0had been made from the seventh century onward, the spread of\\u00a0Wycliffe's Bible\\u00a0resulted in a death sentence for any unlicensed possession of Scripture in English\\u2014even though translations in all other major European languages had been accomplished and made available.[3][4]\\u00a0Tyndale's translation was the first English Bible to draw directly from\\u00a0Hebrew\\u00a0and\\u00a0Greek\\u00a0texts, the first English one to take advantage of the\\u00a0printing press, and first of the new English Bibles of the Reformation. It was taken to be a direct challenge to the hegemony of both the Roman Catholic Church and the laws of\\u00a0England\\u00a0to maintain the church's position. In 1530, Tyndale also wrote\\u00a0The Practyse of Prelates, opposing\\u00a0Henry VIII's divorce from\\u00a0Catherine of Aragon\\u00a0on the grounds that it contravened Scripture.Reuchlin's Hebrew grammar was published in 1506. Tyndale worked in an age in which Greek was available to the European scholarly community for the first time in centuries. Erasmus compiled and edited Greek Scriptures into the\\u00a0Textus Receptus\\u2014ironically, to improve upon the Latin\\u00a0Vulgate\\u2014following the\\u00a0Renaissance-fueling\\u00a0Fall of Constantinople\\u00a0in 1453 and the dispersion of Greek-speaking intellectuals and texts into a Europe which previously had access to none. When a copy of\\u00a0The Obedience of a Christian Man\\u00a0fell into the hands of\\u00a0Henry VIII, the king found the rationale to\\u00a0break the Church in England from the Roman Catholic Church\\u00a0in 1534.[5][6][page\\u00a0needed]In 1535, Tyndale was arrested and jailed in the castle of\\u00a0Vilvoorde\\u00a0(Filford) outside\\u00a0Brussels\\u00a0for over a year. In 1536 he was convicted of\\u00a0heresy\\u00a0and executed by strangulation, after which his body was burnt at the stake. His dying prayer that the King of England's eyes would be opened seemed to find its fulfillment just two years later with Henry's authorization of\\u00a0The Great Bible\\u00a0for the Church of England\\u2014which was largely Tyndale's own work. Hence, the\\u00a0Tyndale Bible, as it was known, continued to play a key role in spreading\\u00a0Reformation\\u00a0ideas across the English-speaking world and, eventually, to the\\u00a0British Empire.In 1611, the 54 scholars who produced the\\u00a0King James Bible\\u00a0drew significantly from Tyndale, as well as from translations that descended from his. One estimate suggests the\\u00a0New Testament\\u00a0in the King James Version is 83% Tyndale's and the\\u00a0Old Testament\\u00a076%.[7]\\u00a0With his translation of the Bible the first to be printed in English, and a model for subsequent English translations, in 2002, Tyndale was placed at number 26 in the BBC's poll of the\\u00a0100 Greatest Britons.[8][9]<br/><br/>-from Wikipedia<br/></p>", "url_path": "/home/about/", "has_unpublished_changes": false, "subsection_title": "About", "go_live_at": null, "slug": "about", "expired": false, "first_published_at": "2015-08-11T02:53:09.329Z", "expire_at": null, "live": true, "path": "000100010001", "content_type": 17, "pk": 4, "main_image": 1, "show_in_menus": true, "search_description": "", "subsection_subtitle": "About William Tyndale and YALA Mission", "numchild": 0, "latest_revision_created_at": "2015-08-11T02:53:09.255Z", "locked": false}	\N	4	1
@@ -749,7 +749,7 @@ SELECT pg_catalog.setval('wagtailcore_pagerevision_id_seq', 9, true);
 -- Data for Name: wagtailcore_pageviewrestriction; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY wagtailcore_pageviewrestriction (id, password, page_id) FROM stdin;
+\COPY wagtailcore_pageviewrestriction (id, password, page_id) FROM stdin;
 \.
 
 
@@ -764,7 +764,7 @@ SELECT pg_catalog.setval('wagtailcore_pageviewrestriction_id_seq', 1, false);
 -- Data for Name: wagtailcore_site; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY wagtailcore_site (id, hostname, port, is_default_site, root_page_id) FROM stdin;
+\COPY wagtailcore_site (id, hostname, port, is_default_site, root_page_id) FROM stdin;
 2	localhost	80	t	3
 \.
 
@@ -780,7 +780,7 @@ SELECT pg_catalog.setval('wagtailcore_site_id_seq', 2, true);
 -- Data for Name: wagtaildocs_document; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY wagtaildocs_document (id, title, file, created_at, uploaded_by_user_id) FROM stdin;
+\COPY wagtaildocs_document (id, title, file, created_at, uploaded_by_user_id) FROM stdin;
 \.
 
 
@@ -795,7 +795,7 @@ SELECT pg_catalog.setval('wagtaildocs_document_id_seq', 1, false);
 -- Data for Name: wagtailembeds_embed; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY wagtailembeds_embed (id, url, max_width, type, html, title, author_name, provider_name, thumbnail_url, width, height, last_updated) FROM stdin;
+\COPY wagtailembeds_embed (id, url, max_width, type, html, title, author_name, provider_name, thumbnail_url, width, height, last_updated) FROM stdin;
 \.
 
 
@@ -810,7 +810,7 @@ SELECT pg_catalog.setval('wagtailembeds_embed_id_seq', 1, false);
 -- Data for Name: wagtailforms_formsubmission; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY wagtailforms_formsubmission (id, form_data, submit_time, page_id) FROM stdin;
+\COPY wagtailforms_formsubmission (id, form_data, submit_time, page_id) FROM stdin;
 \.
 
 
@@ -825,7 +825,7 @@ SELECT pg_catalog.setval('wagtailforms_formsubmission_id_seq', 1, false);
 -- Data for Name: wagtailimages_filter; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY wagtailimages_filter (id, spec) FROM stdin;
+\COPY wagtailimages_filter (id, spec) FROM stdin;
 1	max-130x100
 2	max-130x130
 3	max-750x300
@@ -852,7 +852,7 @@ SELECT pg_catalog.setval('wagtailimages_image_id_seq', 3, true);
 -- Data for Name: wagtailimages_rendition; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY wagtailimages_rendition (id, file, width, height, focal_point_key, filter_id, image_id) FROM stdin;
+\COPY wagtailimages_rendition (id, file, width, height, focal_point_key, filter_id, image_id) FROM stdin;
 1	images/William-Tyndale_620_osLvvgM.max-130x100.jpg	130	52		1	1
 2	images/William-Tyndale_620_osLvvgM.max-130x130.jpg	130	52		2	1
 3	images/William-Tyndale_620_osLvvgM.max-750x300.jpg	749	300		3	1
@@ -878,7 +878,7 @@ SELECT pg_catalog.setval('wagtailimages_rendition_id_seq', 11, true);
 -- Data for Name: wagtailredirects_redirect; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY wagtailredirects_redirect (id, old_path, is_permanent, redirect_link, redirect_page_id, site_id) FROM stdin;
+\COPY wagtailredirects_redirect (id, old_path, is_permanent, redirect_link, redirect_page_id, site_id) FROM stdin;
 \.
 
 
@@ -893,7 +893,7 @@ SELECT pg_catalog.setval('wagtailredirects_redirect_id_seq', 1, false);
 -- Data for Name: wagtailsearch_query; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY wagtailsearch_query (id, query_string) FROM stdin;
+\COPY wagtailsearch_query (id, query_string) FROM stdin;
 \.
 
 
@@ -901,7 +901,7 @@ COPY wagtailsearch_query (id, query_string) FROM stdin;
 -- Data for Name: wagtailsearch_editorspick; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY wagtailsearch_editorspick (id, sort_order, description, page_id, query_id) FROM stdin;
+\COPY wagtailsearch_editorspick (id, sort_order, description, page_id, query_id) FROM stdin;
 \.
 
 
@@ -923,7 +923,7 @@ SELECT pg_catalog.setval('wagtailsearch_query_id_seq', 1, false);
 -- Data for Name: wagtailsearch_querydailyhits; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY wagtailsearch_querydailyhits (id, date, hits, query_id) FROM stdin;
+\COPY wagtailsearch_querydailyhits (id, date, hits, query_id) FROM stdin;
 \.
 
 
@@ -938,7 +938,7 @@ SELECT pg_catalog.setval('wagtailsearch_querydailyhits_id_seq', 1, false);
 -- Data for Name: wagtailusers_userprofile; Type: TABLE DATA; Schema: public; Owner: tyndale
 --
 
-COPY wagtailusers_userprofile (id, submitted_notifications, approved_notifications, rejected_notifications, user_id) FROM stdin;
+\COPY wagtailusers_userprofile (id, submitted_notifications, approved_notifications, rejected_notifications, user_id) FROM stdin;
 \.
 
 
