@@ -1,0 +1,18 @@
+
+{% extends "about_base.html" %}
+
+{% load static tyndale_tags wagtailcore_tags wagtailimages_tags %}
+
+
+
+{% block page_name_for_section %}academic{% endblock %}
+{% block page_name_for_container %}about{% endblock %}
+
+{% block w-col-9 %}
+    {% image self.main_image max-750x300 as academic_image %}
+    <img class="about-image" src="{{ academic_image.url }}" height="300">
+
+    <div class="about-body-text">
+        {{ self.body | richtext }}
+    </div>
+{% endblock %}

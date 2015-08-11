@@ -1,0 +1,30 @@
+{% load static  tyndale_tags wagtailcore_tags %}
+{% get_site_root as site_root %}
+
+
+<div class="w-nav navbar" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1" data-ix="sdown-load-300" data-doc-height="1" data-no-scroll="1">
+    <div class="w-container w-container wide-container">
+      <a class="w-nav-brand" href="{% pageurl site_root %}">
+          <img class="logo" src="{% static 'images/logo-with-name.svg' %}" height="75">
+      </a>
+
+      <nav class="w-nav-menu nav-menu" role="navigation">
+          {% for menuitem in menuitems %}
+              {% if menuitem.show_dropdown %}
+                <div class="w-dropdown nav-link" data-delay="0">
+                  <div class="w-dropdown-toggle dropdown-toggle">
+                    <div>{{ menuitem.title }}</div>
+                  </div>
+                  {% display_navbar_dropdown parent=menuitem %}
+                </div>
+              {% else %}
+                <a class="w-nav-link nav-link {% if menuitem.active %}w--current{% endif %}" href="{% pageurl menuitem %}">{{ menuitem.title }}</a>
+              {% endif %}
+          {% endfor %}
+      </nav>
+
+        <div class="w-nav-button menu-button">
+            <div class="w-icon-nav-menu menu-icon"></div>
+        </div>
+    </div>
+  </div>

@@ -1,0 +1,76 @@
+
+{% extends "about_base.html" %}
+
+{% load static tyndale_tags wagtailcore_tags wagtailimages_tags %}
+
+
+{% block page_name_for_section %}staff{% endblock %}
+{% block page_name_for_container %}staff{% endblock %}
+{% block blank-col %}blank-col{% endblock %}
+{% block w-col-stack %}w-col-stack{% endblock %}
+
+{% block w-col-9 %}
+     <div class="w-row">
+              <div class="w-col w-col-6">
+                <div class="home-mini-section staff-mini-section" data-ix="popup-scroll">
+                  <div class="staff-sub-panel">
+                    <h1 class="staff-sub-panel-title">{{ self.first_column_header }}</h1>
+                  </div>
+                  {% image self.first_column_image max-324x324 as first_image %}
+                  <img class="profile-image admin-profile-image" src="{{ first_image.url }}" height="250">
+                  <h1 class="profile-heading">{{ self.first_column_name }} <br><em class="positioin-name">{{ self.first_column_position }}</em></h1>
+                  <div class="separator separator-small"></div>
+                  <div class="home-section-text">
+                      {{ self.first_column_spec | richtext }}
+                  </div>
+                </div>
+              </div>
+              <div class="w-col w-col-6">
+                <div class="home-mini-section staff-mini-section" data-ix="popup-scroll">
+                  <div class="staff-sub-panel">
+                    <h1 class="staff-sub-panel-title">{{ self.second_column_header }}</h1>
+                  </div>
+                  {% image self.second_column_image max-324x324 as second_image %}
+                  <img class="profile-image admin-profile-image" src="{{ second_image.url }}" height="250">
+                  <h1 class="profile-heading">{{ self.second_column_name }} <br><em class="positioin-name">{{ self.second_column_position }}</em></h1>
+                  <div class="separator separator-small"></div>
+                  <div class="home-section-text">
+                      {{ self.second_column_spec | richtext }}
+                  </div>
+                </div>
+              </div>
+            </div>
+     <div class="w-row">
+              <div class="w-col w-col-4">
+                <div class="home-mini-section staff-mini-section staff-mini-section-wider" data-ix="popup-scroll">
+                  <div class="staff-sub-panel">
+                    <h1 class="staff-sub-panel-title">{{ self.third_column_header }}</h1>
+                  </div>
+                  {% image self.third_column_image max-324x324 as third_image %}
+                  <img class="profile-image admin-profile-image half-profile-image" src="{{ third_image.url }}" height="250">
+                  <h1 class="profile-heading">{{ self.third_column_name }}<br><em class="positioin-name small-position-name">{{ self.third_column_position }}</em></h1>
+                </div>
+              </div>
+              <div class="w-col w-col-4">
+                <div class="home-mini-section staff-mini-section staff-mini-section-wider" data-ix="popup-scroll">
+                  <div class="staff-sub-panel">
+                    <h1 class="staff-sub-panel-title">{{ self.fourth_column_header }}</h1>
+                  </div>
+                  {% image self.fourth_column_image max-324x324 as fourth_image %}
+                  <img class="profile-image admin-profile-image half-profile-image" src="{{ fourth_image.url }}" height="250">
+                  <h1 class="profile-heading">{{ self.fourth_column_name }}&nbsp;<br><span style="font-size: 17px;"><em>{{ self.fourth_column_position }}</em></span></h1>
+                </div>
+              </div>
+              <div class="w-col w-col-4">
+                <div class="home-mini-section staff-mini-section staff-mini-section-wider" data-ix="popup-scroll">
+                  <div class="staff-sub-panel">
+                    <h1 class="staff-sub-panel-title">{{ self.fifth_column_header }}</h1>
+                  </div>
+                  {% image self.fifth_column_image max-324x324 as fifth_image %}
+                  <img class="profile-image admin-profile-image half-profile-image" src="{{ fifth_image.url }}" height="250">
+                  <h1 class="profile-heading">{{ self.fifth_column_name }}&nbsp;<br><span style="font-size: 17px;"><em>{{ self.fifth_column_position }}</em></span></h1>
+                </div>
+              </div>
+            </div>
+{% endblock %}
+

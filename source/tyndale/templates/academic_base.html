@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static wagtailuserbar tyndale_tags %}
+
+{% block about_content %}
+<div class="w-section {% block page_name_for_section %}{% endblock %}-section">
+    {% display_subsection %}
+         <div>
+           <div class="w-row">
+             <div class="w-col w-col-3 {% block blank-col %}{% endblock %}">
+               {% display_sidemenu  %}
+             </div>
+             <div class="w-col w-col-9 {% block w-col-stack %}{% endblock %}">
+               <div class="{% block w-container %}{% endblock %} {% block wide-container %}{% endblock %} {% block page_name_for_container %}{% endblock %}-container" data-ix="fade-in">
+                   {% block w-col-9 %}{% endblock %}
+               </div>
+             </div>
+           </div>
+         </div>
+     </div>
+{% endblock %}

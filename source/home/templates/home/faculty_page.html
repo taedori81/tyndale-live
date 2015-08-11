@@ -1,0 +1,548 @@
+
+{% extends "academic_base.html" %}
+
+{% load static tyndale_tags wagtailcore_tags wagtailimages_tags %}
+
+
+
+{% block page_name_for_section %}faculty{% endblock %}
+{% block page_name_for_container %}about{% endblock %}
+{% block blank-col %}w-col-stack{% endblock %}
+{% block w-col-stack %}w-col-stack{% endblock %}
+
+
+{% block w-col-9 %}
+
+
+{#     <div class="w-tabs faculty-tabs" data-duration-in="300" data-duration-out="100">#}
+{#              <div class="w-tab-menu faculty-tab-menu">#}
+{#                <a class="w-tab-link w--current w-inline-block faculty-tab-link" data-w-tab="Tab 1">#}
+{#                  <div class="faculty-tab-text-block">{{ self.tab_title_1 }}</div>#}
+{#                </a>#}
+{#                <a class="w-tab-link w-inline-block faculty-tab-link" data-w-tab="Tab 2">#}
+{#                  <div class="faculty-tab-text-block">{{ self.tab_title_2 }}</div>#}
+{#                </a>#}
+{#              </div>#}
+{##}
+{#              <div class="w-tab-content faculty-tab-content">#}
+{#                <div class="w-tab-pane w--tab-active faculty-tab-pane" data-w-tab="Tab 1">#}
+{##}
+{#                  <div class="w-dropdown program-dropdown" data-delay="900">#}
+{#                    <div class="w-dropdown-toggle program-dropdown-toggle" data-ix="accordion">#}
+{#                      <div class="programs-title">{{ self.subject_name_1 }}</div>#}
+{#                      <div class="w-icon-dropdown-toggle program-dropdown-icon"></div>#}
+{#                    </div>#}
+{#                    <div class="w-dropdown-list program-dropdown-list" data-ix="hidden">#}
+{#                      <div class="program-content">#}
+{#                        <div class="w-tabs faculty-tabs" data-duration-in="300" data-duration-out="100">#}
+{#                          <div class="w-tab-menu faculty-tab-menu">#}
+{#                            <a class="w-tab-link w--current w-inline-block faculty-class-tab-link" data-w-tab="Tab 1">#}
+{#                              <div class="faculty-tab-text-block small-text">Old Testament</div>#}
+{#                            </a>#}
+{#                            <a class="w-tab-link w-inline-block faculty-class-tab-link" data-w-tab="Tab 2">#}
+{#                              <div class="faculty-tab-text-block small-text">New Testament</div>#}
+{#                            </a>#}
+{#                            <a class="w-tab-link w-inline-block faculty-class-tab-link" data-w-tab="Tab 3">#}
+{#                              <div class="faculty-tab-text-block small-text">Biblical Languages (Hebrew, Greek)</div>#}
+{#                            </a>#}
+{#                          </div>#}
+{#                          <div class="w-tab-content faculty-tab-content faculty-tab-content2">#}
+{#                            <div class="w-tab-pane" data-w-tab="Tab 1">#}
+{#                              <div class="w-row faculty-row">#}
+{#                                <div class="w-col w-col-3">#}
+{#                                  <div class="faculty-image-holder"></div>#}
+{#                                </div>#}
+{#                                <div class="w-col w-col-9">#}
+{#                                  <div class="faculty-spec-content">#}
+{#                                    <h1 class="faculty-name-heading">See-Nam#}
+{#Kim</h1>#}
+{#                                    <p class="faculty-spec-paragraph">Ph.D., University of California in Los Angeles, Los Angeles: CA.#}
+{#                                      <br>M.A., Fuller Theological Seminary, Pasadena: CA.#}
+{#                                      <br> M.A., University of California in Los Angeles, CA.#}
+{#                                      <br>M.Div., Chongshin Theological Seminary, Seoul: Korea.#}
+{#                                      <br>B.A., Chongshin College, Seoul: Korea.</p>#}
+{#                                  </div>#}
+{#                                </div>#}
+{#                              </div>#}
+{#                            </div>#}
+{#                            <div class="w-tab-pane" data-w-tab="Tab 2">#}
+{#                              <div class="w-row faculty-row">#}
+{#                                <div class="w-col w-col-3">#}
+{#                                  <div class="faculty-image-holder"></div>#}
+{#                                </div>#}
+{#                                <div class="w-col w-col-9">#}
+{#                                  <div class="faculty-spec-content">#}
+{#                                    <h1 class="faculty-name-heading">Joel#}
+{#E. Kim</h1>#}
+{#                                    <p class="faculty-spec-paragraph">Ph. D., Calvin Theological Seminary, Grand Rapids: MI.#}
+{#                                      <br>M.Div., Westminster Seminary, Escondido: CA.#}
+{#                                      <br>B.A., University of California in Los Angeles, Los Angeles: CA.</p>#}
+{#                                  </div>#}
+{#                                </div>#}
+{#                              </div>#}
+{#                            </div>#}
+{#                            <div class="w-tab-pane w--tab-active" data-w-tab="Tab 3">#}
+{#                              <div class="w-row faculty-row">#}
+{#                                <div class="w-col w-col-3">#}
+{#                                  <div class="faculty-image-holder"></div>#}
+{#                                </div>#}
+{#                                <div class="w-col w-col-9">#}
+{#                                  <div class="faculty-spec-content">#}
+{#                                    <h1 class="faculty-name-heading">Seung-Won#}
+{#Suh</h1>#}
+{#                                    <p class="faculty-spec-paragraph">D.Min. candi., Calremont Graduate School, Pomona: CA.#}
+{#                                      <br>Ph.D., Athens National University, Athens: Greece.#}
+{#                                      <br>M.Phil., Athens National University, Athens: Greece. M.Div., International Theological Seminary, El Monte: CA.#}
+{#                                      <br>Chongshin Theological Seminary, Seoul: Korea.#}
+{#                                      <br>M.A., Seoul National University, Seoul: Korea.#}
+{#                                      <br>B.A., Seoul National University, Seoul: Korea.</p>#}
+{#                                  </div>#}
+{#                                </div>#}
+{#                              </div>#}
+{#                            </div>#}
+{#                          </div>#}
+{#                        </div>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{##}
+{#                  <div class="w-dropdown program-dropdown" data-delay="900">#}
+{#                    <div class="w-dropdown-toggle program-dropdown-toggle" data-ix="accordion">#}
+{#                      <div class="programs-title">{{ self.subject_name_2 }}</div>#}
+{#                      <div class="w-icon-dropdown-toggle program-dropdown-icon"></div>#}
+{#                    </div>#}
+{#                    <div class="w-dropdown-list program-dropdown-list" data-ix="hidden">#}
+{#                      <div class="program-content">#}
+{#                        <div class="w-row faculty-row">#}
+{#                          <div class="w-col w-col-3">#}
+{#                            <div class="faculty-image-holder"></div>#}
+{#                          </div>#}
+{#                          <div class="w-col w-col-9">#}
+{#                            <div class="faculty-spec-content">#}
+{#                              <h1 class="faculty-name-heading">Young-Ho#}
+{#Im</h1>#}
+{#                              <p class="faculty-spec-paragraph">Th.D., Life University, Gardena: CA.#}
+{#                                <br>Ed.D., Reformed University &amp; Seminary, Los Angeles: CA.#}
+{#                                <br> Westminster Seminary, Escondido: CA.#}
+{#                                <br>Th.M. candi., Calvin Theological Seminary, Grand Rapids: MI.#}
+{#                                <br>M.Div., American Christian College &amp; Seminary, Oklahoma City: OM.#}
+{#                                <br>B.Th. &amp; M.Div., Chongshin University &amp; Seminary, Los Angeles: CA.</p>#}
+{#                            </div>#}
+{#                          </div>#}
+{#                        </div>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{##}
+{#                  <div class="w-dropdown program-dropdown" data-delay="900">#}
+{#                    <div class="w-dropdown-toggle program-dropdown-toggle" data-ix="accordion">#}
+{#                      <div class="programs-title">{{ self.subject_name_3 }}#}
+{#                      </div>#}
+{#                      <div class="w-icon-dropdown-toggle program-dropdown-icon"></div>#}
+{#                    </div>#}
+{#                    <div class="w-dropdown-list program-dropdown-list" data-ix="hidden">#}
+{#                      <div class="program-content">#}
+{#                        <div class="w-row faculty-row">#}
+{#                          <div class="w-col w-col-3">#}
+{#                            <div class="faculty-image-holder"></div>#}
+{#                          </div>#}
+{#                          <div class="w-col w-col-9">#}
+{#                            <div class="faculty-spec-content">#}
+{#                              <h1 class="faculty-name-heading">Kwang-Yul#}
+{#Yum</h1>#}
+{#                              <p class="faculty-spec-paragraph">Ed.D., Temple University, Philadelphia: PA.#}
+{#                                <br>M.A., Temple University, Philadelphia: PA.#}
+{#                                <br>M.Div., Westminster Theological Seminary, Glenside: PA.#}
+{#                                <br>M.A.R., Westminster Theological Seminary, Glenside: PA.#}
+{#                                <br>B.A., Jun-Nam University, Kwang-Joo: Korea.</p>#}
+{#                            </div>#}
+{#                          </div>#}
+{#                        </div>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{##}
+{#                  <div class="w-dropdown program-dropdown" data-delay="900">#}
+{#                    <div class="w-dropdown-toggle program-dropdown-toggle" data-ix="accordion">#}
+{#                      <div class="programs-title">{{ self.subject_name_4 }}</div>#}
+{#                      <div class="w-icon-dropdown-toggle program-dropdown-icon"></div>#}
+{#                    </div>#}
+{#                    <div class="w-dropdown-list program-dropdown-list" data-ix="hidden">#}
+{#                      <div class="program-content">#}
+{#                        <div class="w-row faculty-row">#}
+{#                          <div class="w-col w-col-3">#}
+{#                            <div class="faculty-image-holder"></div>#}
+{#                          </div>#}
+{#                          <div class="w-col w-col-9">#}
+{#                            <div class="faculty-spec-content">#}
+{#                              <h1 class="faculty-name-heading">Hee-Kyu#}
+{#Choi</h1>#}
+{#                              <p class="faculty-spec-paragraph">Th.D. candi., Internatioal Theological Seminary, El Monte: CA.#}
+{#                                <br>D.Min., Reformed Theological Seminary, Jackson: MS.#}
+{#                                <br>Th.M., International Theological Seminary, El Monte: CA.#}
+{#                                <br>Westminster Seminary, Escondido: CA.#}
+{#                                <br>M.Div. equiv., Free Church of Scotland College, Edinburgh: Scotland.#}
+{#                                <br>Chongshin Theological Seminary, Seoul: Korea.#}
+{#                                <br>B.Th., Calvin College, Seoul: Korea.</p>#}
+{#                            </div>#}
+{#                          </div>#}
+{#                        </div>#}
+{#                        <div class="w-row faculty-row">#}
+{#                          <div class="w-col w-col-3">#}
+{#                            <div class="faculty-image-holder"></div>#}
+{#                          </div>#}
+{#                          <div class="w-col w-col-9">#}
+{#                            <div class="faculty-spec-content">#}
+{#                              <h1 class="faculty-name-heading">James#}
+{#Sang-Mok Park</h1>#}
+{#                              <p class="faculty-spec-paragraph">Ph.D. candi., Trinity Theological Seminary, Evansville: IN.#}
+{#                                <br>D.Miss., Reformed Theological Seminary, Jackson: MS.#}
+{#                                <br>Th.M., Reformed Theological Seminary, Jackson: MS.#}
+{#                                <br>M.A., Reformed Theological Seminary, Jackson: MS.#}
+{#                                <br>M.Div., Reformed Theological Seminary, Jackson: MS.#}
+{#                                <br>B.S., West Virginia University Tech., Montgomery: WV.</p>#}
+{#                            </div>#}
+{#                          </div>#}
+{#                        </div>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                  <div class="w-dropdown program-dropdown" data-delay="900">#}
+{#                    <div class="w-dropdown-toggle program-dropdown-toggle" data-ix="accordion">#}
+{#                      <div class="programs-title">{{ self.subject_name_5 }}#}
+{#                      </div>#}
+{#                      <div class="w-icon-dropdown-toggle program-dropdown-icon"></div>#}
+{#                    </div>#}
+{#                    <div class="w-dropdown-list program-dropdown-list" data-ix="hidden">#}
+{#                      <div class="program-content">#}
+{#                        <div class="w-row faculty-row">#}
+{#                          <div class="w-col w-col-3">#}
+{#                            <div class="faculty-image-holder"></div>#}
+{#                          </div>#}
+{#                          <div class="w-col w-col-9">#}
+{#                            <div class="faculty-spec-content">#}
+{#                              <h1 class="faculty-name-heading">Seong-Ah#}
+{#Kim</h1>#}
+{#                              <p class="faculty-spec-paragraph">D.M.A., University of Southern California, Los Angeles: CA.#}
+{#                                <br>M.M., Cal State Northridge, Northridge: CA.#}
+{#                                <br>B.M., Cal State Northridge, Northridge: CA.</p>#}
+{#                            </div>#}
+{#                          </div>#}
+{#                        </div>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                  <div class="w-dropdown program-dropdown" data-delay="900">#}
+{#                    <div class="w-dropdown-toggle program-dropdown-toggle" data-ix="accordion">#}
+{#                      <div class="programs-title">{{ self.subject_name_6 }}</div>#}
+{#                      <div class="w-icon-dropdown-toggle program-dropdown-icon"></div>#}
+{#                    </div>#}
+{#                    <div class="w-dropdown-list program-dropdown-list" data-ix="hidden">#}
+{#                      <div class="program-content">#}
+{#                        <div class="w-row faculty-row">#}
+{#                          <div class="w-col w-col-3">#}
+{#                            <div class="faculty-image-holder"></div>#}
+{#                          </div>#}
+{#                          <div class="w-col w-col-9">#}
+{#                            <div class="faculty-spec-content">#}
+{#                              <h1 class="faculty-name-heading">Frank#}
+{#J. Smith</h1>#}
+{#                              <p class="faculty-spec-paragraph">D.D., Methodist Episcopal Church USA.#}
+{#                                <br>Ph.D., City University of New York, New York: NY.#}
+{#                                <br>M.Phil., City University of New York, New York: NY.#}
+{#                                <br>Th.M., Westminster Theological Seminary, Glenside: PA.#}
+{#                                <br>M.Div., Westminster Theological Seminary, Glenside: PA.#}
+{#                                <br>B.A., Covenant College, Lookout Mountain: GA.</p>#}
+{#                            </div>#}
+{#                          </div>#}
+{#                        </div>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                  <div class="w-dropdown program-dropdown" data-delay="900">#}
+{#                    <div class="w-dropdown-toggle program-dropdown-toggle" data-ix="accordion">#}
+{#                      <div class="programs-title">{{ self.subject_name_7 }}</div>#}
+{#                      <div class="w-icon-dropdown-toggle program-dropdown-icon"></div>#}
+{#                    </div>#}
+{#                    <div class="w-dropdown-list program-dropdown-list" data-ix="hidden">#}
+{#                      <div class="program-content">#}
+{#                        <div class="w-row faculty-row">#}
+{#                          <div class="w-col w-col-3">#}
+{#                            <div class="faculty-image-holder"></div>#}
+{#                          </div>#}
+{#                          <div class="w-col w-col-9">#}
+{#                            <div class="faculty-spec-content">#}
+{#                              <h1 class="faculty-name-heading">James#}
+{#Sang-Mok Park</h1>#}
+{#                              <p class="faculty-spec-paragraph">Ph.D. candi., Trinity Theological Seminary, Evansville: IN.#}
+{#                                <br>D.Miss., Reformed Theological Seminary, Jackson: MS.#}
+{#                                <br>Th.M., Reformed Theological Seminary, Jackson: MS.#}
+{#                                <br>M.A., Reformed Theological Seminary, Jackson: MS.#}
+{#                                <br>M.Div., Reformed Theological Seminary, Jackson: MS.#}
+{#                                <br>B.S., West Virginia University Tech., Montgomery: WV.</p>#}
+{#                            </div>#}
+{#                          </div>#}
+{#                        </div>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                  <div class="w-dropdown program-dropdown" data-delay="900">#}
+{#                    <div class="w-dropdown-toggle program-dropdown-toggle" data-ix="accordion">#}
+{#                      <div class="programs-title">{{ self.subject_name_8 }}#}
+{#                      </div>#}
+{#                      <div class="w-icon-dropdown-toggle program-dropdown-icon"></div>#}
+{#                    </div>#}
+{#                    <div class="w-dropdown-list program-dropdown-list" data-ix="hidden">#}
+{#                      <div class="program-content">#}
+{#                        <div class="w-row faculty-row">#}
+{#                          <div class="w-col w-col-3">#}
+{#                            <div class="faculty-image-holder"></div>#}
+{#                          </div>#}
+{#                          <div class="w-col w-col-9">#}
+{#                            <div class="faculty-spec-content">#}
+{#                              <h1 class="faculty-name-heading">Daniel#}
+{#C. Ji</h1>#}
+{#                              <p class="faculty-spec-paragraph">Th.D., California Graduate School of Theology, Westminster: CA.#}
+{#                                <br>D.R.E., Faith Theological Seminary, Philadelphia: PA.#}
+{#                                <br>S.T.M., Faith Theological Seminary, Philadelphia: PA.#}
+{#                                <br>M.Div., Faith Theological Seminary, Philadelphia: PA.#}
+{#                                <br>B.L., Korea University, Seoul: Korea.</p>#}
+{#                            </div>#}
+{#                          </div>#}
+{#                        </div>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{##}
+{#                <div class="w-tab-pane faculty-tab-pane" data-w-tab="Tab 2">#}
+{#                  <div class="w-row faculty-row">#}
+{#                    <div class="w-col w-col-3">#}
+{#                      <div class="faculty-image-holder"></div>#}
+{#                    </div>#}
+{#                    <div class="w-col w-col-9">#}
+{#                      <div class="faculty-spec-content">#}
+{#                        <h1 class="faculty-name-heading">In-Gyu#}
+{#Hong</h1>#}
+{#                        <div class="faculty-subtitle">Adjunct Professor of New Testament</div>#}
+{#                        <p class="faculty-spec-paragraph">In-Gyu Hong, Adjunct Professor of New Testament#}
+{#                          <br>Ph.D., University of Stellenbosch, Capetown: South Africa.#}
+{#                          <br>M.Phil., University of Stellenbosch, Capetown: South Africa.#}
+{#                          <br>M.Div., Reformed Theological Seminary, Jackson: MS.#}
+{#                          <br>B.A., Jun-Nam University, Kwnag-Joo: Korea.#}
+{#                          <br>Former Professor of New Testament, Reformed Seminary, Seoul: Korea. 1993~1997#}
+{#                          <br>Professor of New Testament, Baek-Suk Theological Seminary, Chun-An:Korea. 1997~#}
+{#                          <br>President of Baek-Suk Theological Seminary, Chun-An: Korea</p>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                  <div class="w-row faculty-row">#}
+{#                    <div class="w-col w-col-3">#}
+{#                      <div class="faculty-image-holder"></div>#}
+{#                    </div>#}
+{#                    <div class="w-col w-col-9">#}
+{#                      <div class="faculty-spec-content">#}
+{#                        <h1 class="faculty-name-heading">Daniel#}
+{#H. Kim</h1>#}
+{#                        <div class="faculty-subtitle">Adjunct Professor of Handicapped Theology</div>#}
+{#                        <p class="faculty-spec-paragraph">Ph.D., Reformed Theological Seminary, Jackson: MS.#}
+{#                          <br>Th.M., Reformed Theological Seminary, Jackson: MS.#}
+{#                          <br>M.Div., Westminster Theological Seminary, Glenside: PA.#}
+{#                          <br> M.A.R., Westminster Theological Seminary, Glenside: PA.#}
+{#                          <br>B.A., Choong-Nam University, Dae-Jeon: Korea. President of Joy Mission Fellowship.</p>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                  <div class="w-row faculty-row">#}
+{#                    <div class="w-col w-col-3">#}
+{#                      <div class="faculty-image-holder"></div>#}
+{#                    </div>#}
+{#                    <div class="w-col w-col-9">#}
+{#                      <div class="faculty-spec-content">#}
+{#                        <h1 class="faculty-name-heading">Seung-Kon.#}
+{#Kim</h1>#}
+{#                        <div class="faculty-subtitle">Adjunct Professor of Systematic Theology</div>#}
+{#                        <p class="faculty-spec-paragraph">Th.D., California Graduate School of Theology, Westminster: CA.#}
+{#                          <br>M.Div., Chongshin Theological Seminary, Seoul: Korea#}
+{#                          <br>B.A., Koryo Bible College, Busan: Korea.#}
+{#                          <br>Pastor Emeritus of Na-Sung West Church, Los Angeles: CA.#}
+{#                          <br>Former President of International Bible Seminary, Los Angeles: CA.</p>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                  <div class="w-row faculty-row">#}
+{#                    <div class="w-col w-col-3">#}
+{#                      <div class="faculty-image-holder"></div>#}
+{#                    </div>#}
+{#                    <div class="w-col w-col-9">#}
+{#                      <div class="faculty-spec-content">#}
+{#                        <h1 class="faculty-name-heading">Nathan#}
+{#P. Eshelman</h1>#}
+{#                        <div class="faculty-subtitle">Adjunct Professor of Practical Theology</div>#}
+{#                        <p class="faculty-spec-paragraph">D.Min., Reformed Presbyterian Theological Seminary, Pittsburgh: PA.#}
+{#                          <br>Th.M. candi., Puritan Reformed Theological Seminary, Grand Rapids: MI.#}
+{#                          <br>M.Div., Puritan Reformed Theological Seminary, Grand Rapids: MI.#}
+{#                          <br>B.Th., Kuyper College, Grand Rapids: MI.#}
+{#                          <br>Senior Pastor of the Los Angeles, Los Angeles: CA.#}
+{#                          <br>Reformed Presbyterian Church, Co-author of Gentle Reformation.#}
+{#                          <br>President of the Home Mission Board (RPCNA).</p>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                  <div class="w-row faculty-row">#}
+{#                    <div class="w-col w-col-3">#}
+{#                      <div class="faculty-image-holder"></div>#}
+{#                    </div>#}
+{#                    <div class="w-col w-col-9">#}
+{#                      <div class="faculty-spec-content">#}
+{#                        <h1 class="faculty-name-heading">Christopher K.#}
+{#Lensch</h1>#}
+{#                        <div class="faculty-subtitle">Adjunct Assistant Professor of Old Testament</div>#}
+{#                        <p class="faculty-spec-paragraph">S.T.M., Faith Theological Seminary, Philadelphia: PA.#}
+{#                          <br>M.Div., Faith Theological Seminary, Philadelphia: PA.#}
+{#                          <br>B.A., Shelton College, Ringwood: NJ.#}
+{#                          <br>Associate Professor of Old Testament, Western Reformed Seminary, 1998~</p>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                  <div class="w-row faculty-row">#}
+{#                    <div class="w-col w-col-3">#}
+{#                      <div class="faculty-image-holder"></div>#}
+{#                    </div>#}
+{#                    <div class="w-col w-col-9">#}
+{#                      <div class="faculty-spec-content">#}
+{#                        <h1 class="faculty-name-heading">John#}
+{#A. Battle</h1>#}
+{#                        <div class="faculty-subtitle">Adjunct Professor of New Testament and Theology</div>#}
+{#                        <p class="faculty-spec-paragraph">Th.D. Grace Theological Seminary, Winona Lake: IN.#}
+{#                          <br>S.T.M. Faith Theological Seminary, Philadelphia: PA.#}
+{#                          <br>M.Div., Faith Theological Seminary, Philadelphia: PA.#}
+{#                          <br>B.A., Highland College, Pasadena: CA.#}
+{#                          <br>Professor of Old Testament, Western Reformed Seminary, 1998~</p>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                  <div class="w-row faculty-row">#}
+{#                    <div class="w-col w-col-3">#}
+{#                      <div class="faculty-image-holder"></div>#}
+{#                    </div>#}
+{#                    <div class="w-col w-col-9">#}
+{#                      <div class="faculty-spec-content">#}
+{#                        <h1 class="faculty-name-heading">Richard#}
+{#L. Pratt</h1>#}
+{#                        <div class="faculty-subtitle">Adjunct Professor of Old Testament</div>#}
+{#                        <p class="faculty-spec-paragraph">Th.D., Harvard University Divinity School, Cambridge: MA.#}
+{#                          <br>M.Div., Union Theological Seminary, Richmond: VA.#}
+{#                          <br>Westminster Theological Seminary, Glenside: PA.#}
+{#                          <br>B.A., Roanoke College, Salem: VA.#}
+{#                          <br>Covenant College, Lookout Mountain: GA.#}
+{#                          <br>Former Professor of Old Testament, Reformed Theological Seminary, Jackson: MS.#}
+{#                          <br>Professor of Old Testament, Reformed Theological Seminary, Orlando: FL.#}
+{#                          <br>President of Third Millennium Ministries.</p>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                  <div class="w-row faculty-row">#}
+{#                    <div class="w-col w-col-3">#}
+{#                      <div class="faculty-image-holder"></div>#}
+{#                    </div>#}
+{#                    <div class="w-col w-col-9">#}
+{#                      <div class="faculty-spec-content">#}
+{#                        <h1 class="faculty-name-heading">Joseph#}
+{#A. Pipa</h1>#}
+{#                        <div class="faculty-subtitle">Adjunct Professor of Historical and Systematic Theology</div>#}
+{#                        <p class="faculty-spec-paragraph">Ph.D. Westminster Theological Seminary, Glenside: PA.#}
+{#                          <br>M.Div., Reformed Theological Seminary, Jackson: MS.#}
+{#                          <br>B.A., Belhaven College, Jackson: MS.#}
+{#                          <br>President of Greenville Presbyterian Theological Seminary, Greenville: SC.</p>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+
+
+<div class="w-tabs faculty-tabs" data-duration-in="300" data-duration-out="100">
+    <div class="w-tab-menu faculty-tab-menu">
+       <a class="w-tab-link w--current w-inline-block faculty-tab-link" data-w-tab="Tab 1">
+         <div class="faculty-tab-text-block">{{ self.tab_title_1 }}</div>
+       </a>
+       <a class="w-tab-link w-inline-block faculty-tab-link" data-w-tab="Tab 2">
+         <div class="faculty-tab-text-block">{{ self.tab_title_2 }}</div>
+       </a>
+    </div>
+
+    <div class="w-tab-content faculty-tab-content">
+        <div class="w-tab-pane w--tab-active faculty-tab-pane" data-w-tab="Tab 1">
+            {% with self.courses.all as courses %}
+                {% if courses %}
+                    {% for course in courses %}
+
+                        <div class="w-dropdown program-dropdown" data-delay="900">
+                          <div class="w-dropdown-toggle program-dropdown-toggle" data-ix="accordion">
+                            <div class="programs-title">{{ course.course_name }}</div>
+                            <div class="w-icon-dropdown-toggle program-dropdown-icon"></div>
+                          </div>
+
+                          <div class="w-dropdown-list program-dropdown-list" data-ix="hidden">
+                            <div class="program-content">
+                              {% with self.professors.all as professors %}
+                                  {% if professors %}
+                                      {% for professor in professors %}
+                                          {% if professor.course.course_name == course.course_name %}
+                                              <div class="w-row faculty-row">
+                                                <div class="w-col w-col-3">
+                                                  <div class="faculty-image-holder">
+                                                      {% image professor.professor_image max-150x200 as professor_image %}
+                                                      <img src="{{ professor_image.url }}" alt="Professor Picture">
+                                                  </div>
+                                                </div>
+                                                <div class="w-col w-col-9">
+                                                  <div class="faculty-spec-content">
+                                                    <h1 class="faculty-name-heading">{{ professor.professor_name }}</h1>
+                                                    <div class="faculty-spec-paragraph">{{ professor.professor_spec | richtext }}</div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                          {% endif %}
+                                      {% endfor %}
+                                  {% endif %}
+                              {% endwith %}
+                            </div>
+                          </div>
+                          </div>
+
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+        <div class="w-tab-pane faculty-tab-pane" data-w-tab="Tab 2">
+            {% with self.adjunct_professors.all as adjunct_professors %}
+                {% if adjunct_professors %}
+                    {% for adjunct_professor in adjunct_professors %}
+
+                        <div class="w-row faculty-row">
+                             <div class="w-col w-col-3">
+                                <div class="faculty-image-holder">
+                                    {% image adjunct_professor.professor_image max-150x200 as adjunct_professor_image %}
+                                    <img src="{{ adjunct_professor_image.url }}" alt="Professor Picture">
+                                </div>
+                             </div>
+                             <div class="w-col w-col-9">
+                                <div class="faculty-spec-content">
+                                  <h1 class="faculty-name-heading">{{ adjunct_professor.professor_name }}</h1>
+                                  <div class="faculty-subtitle">{{ adjunct_professor.professor_course }}</div>
+                                  <div class="faculty-spec-paragraph">{{ adjunct_professor.professor_spec | richtext }}</div>
+                                </div>
+                              </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+

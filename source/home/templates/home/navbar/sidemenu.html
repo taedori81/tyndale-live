@@ -1,0 +1,26 @@
+{% load tyndale_tags wagtailcore_tags %}
+{% get_site_root as site_root %}
+
+ <div class="sidemenu" data-ix="sleft-load-300">
+
+     {% if has_children %}
+        <h3 class="sidemenu-heading">{{ current_page.title }}</h3>
+        <a class="submenu-subheading {% if forloop.last %}last-subheading{% endif %}{% if current_page.active %}active{% endif %}"
+              href="{% pageurl current_page %}">{{ current_page.title }}</a>
+        {% for child in children %}
+           <a class="submenu-subheading {% if forloop.last %}last-subheading{% endif %}{% if child.active %}active{% endif %}"
+              href="{% pageurl child %}">{{ child.title }}</a>
+        {% endfor %}
+     {% else %}
+         <h3 class="sidemenu-heading">{{ ancestor.title }}</h3>
+         <a class="submenu-subheading {% if forloop.last %}last-subheading{% endif %}{% if ancestor.active %}active{% endif %}"
+              href="{% pageurl ancestor %}">{{ ancestor.title }}</a>
+         {% if ancestor_children_has_children %}
+             {% for child in ancestor_children %}
+                 <a class="submenu-subheading {% if forloop.last %}last-subheading{% endif %}{% if child.active %}active{% endif %}"
+                    href="{% pageurl child %}">{{ child.title }}</a>
+             {% endfor %}
+         {% endif %}
+     {% endif %}
+ </div>
+

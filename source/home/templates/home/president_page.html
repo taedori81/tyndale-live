@@ -1,0 +1,30 @@
+
+{% extends "about_base.html" %}
+
+{% load static tyndale_tags wagtailcore_tags wagtailimages_tags %}
+
+
+{% block page_name_for_section %}president{% endblock %}
+{% block page_name_for_container %}president{% endblock %}
+
+{% block w-col-9 %}
+     <div class="w-row">
+       <div class="w-col w-col-4 w-col-stack">
+         <div class="profile-container">
+             {% image self.president_image max-340x480 as president_image %}
+             <img class="president-image" src="{{ president_image.url }}" height="300">
+           <div class="profile-text-container">
+             <h3 class="title-heading">{{ self.president_name }}</h3>
+             <h4 class="title-subheading">{{ self.president_title }}</h4>
+           </div>
+         </div>
+       </div>
+       <div class="w-col w-col-8 w-col-stack">
+           <div class="president-message">
+               {{ self.body | richtext }}
+           </div>
+       </div>
+     </div>
+
+{% endblock %}
+

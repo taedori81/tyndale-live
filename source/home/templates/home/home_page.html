@@ -1,0 +1,75 @@
+
+{% extends "base.html" %}
+
+{% load static tyndale_tags wagtailcore_tags %}
+
+{% block body_class %}template-{{ self.get_verbose_name|slugify }}{% endblock %}
+
+{% block home_content %}
+  <section class="w-section hero-section">
+    <div class="w-slider slider" data-animation="outin" data-duration="800" data-infinite="1" data-delay="4000" data-autoplay="1">
+      <div class="w-slider-mask">
+        <div class="w-slide first-slide">
+          <div class="w-container wide-container slide-text-container">
+            <h1 class="slide-heading" data-ix="slidedown">{{ self.slider1_header1 }}</h1>
+            <h1 class="slide-heading" data-ix="slidedown">{{ self.slider1_header2 }}</h1>
+            <h1 class="slide-subheading" data-ix="sdown-load-300">{{ self.slider1_subheader1 }}</h1>
+            <a class="button slide-button" href="/about/" data-ix="slide-down-900">Learn more</a>
+          </div>
+        </div>
+        <div class="w-slide second-slide">
+          <div class="w-container wide-container slide-text-container">
+            <h1 class="slide-heading" data-ix="slidedown">{{ self.slider2_header1 }}</h1>
+            <h1 class="slide-subheading slide-subheading2" data-ix="sdown-load-300">{{ self.slider2_subheader1 }}</h1>
+              <a class="button slide-button slide-button2" href="/about/" data-ix="slide-down-900">Learn more</a>
+          </div>
+        </div>
+      </div>
+      <div class="w-slider-arrow-left"></div>
+      <div class="w-slider-arrow-right"></div>
+    </div>
+    <a class="w-inline-block down-arrow" href="#home"><img src="{% static 'images/down-arrow.svg' %}" width="36" data-ix="hover-on-arrow">
+    </a>
+  </section>
+  <div class="w-section home-section" id="home">
+    <div class="w-container wide-container home-container">
+      <h1 class="home-heading" data-ix="sup-scroll">{{ self.main_header }}</h1>
+      <div class="separator" data-ix="slide-right"></div>
+      <h1 class="home-subheading" data-ix="sup-scroll-300">{{ self.main_subheader }}</h1>
+      <div class="w-row">
+        <div class="w-col w-col-3 w-col-stack">
+          <div class="home-mini-section" data-ix="popup-scroll">
+            <img class="profile-image" src="{% static 'images/frank-sq.png' %}" height="250">
+            <h1 class="profile-heading">President’s welcome</h1>
+            <div class="separator separator-small"></div>
+            <p class="home-section-text">As President of Tyndale International University, I greet you in the name of the Lord Jesus Christ. He is King of kings and Lord of lords...</p><a class="button profile-button" href="about/president_page.html">More</a>
+          </div>
+        </div>
+        <div class="w-col w-col-3 w-col-stack">
+          <div class="home-mini-section" data-ix="popup-scroll-300">
+            <img class="profile-image" src="{% static 'images/Daniel-sq.png' %}" height="250">
+            <h1 class="profile-heading">Chairman’s welcome</h1>
+            <div class="separator separator-small"></div>
+            <p class="home-section-text">Tyndale International University was established based upon Reformed Calvinism and faith based on conservative teaching...</p><a class="button profile-button" href="about/chairman.html">More</a>
+          </div>
+        </div>
+        <div class="w-col w-col-3 w-col-stack">
+          <div class="home-mini-section" data-ix="popup-scroll-600">
+            <img class="profile-image" src="{% static 'images/tyndale-main.png' %}" height="250">
+            <h1 class="profile-heading">Learn about Tyndale</h1>
+            <div class="separator separator-small"></div>
+            <p class="home-section-text">William Tyndale was an English scholar who became a leading figure in Protestant reform in the years leading up to his execution...</p><a class="button profile-button" href="about/about.html">More</a>
+          </div>
+        </div>
+        <div class="w-col w-col-3 w-col-stack">
+          <div class="home-mini-section" data-ix="popup-scroll-900">
+            <img class="profile-image" src="{% static 'images/yala_logo.JPG' %}" height="250">
+            <h1 class="profile-heading">Learn About mission</h1>
+            <div class="separator separator-small"></div>
+            <p class="home-section-text-yala">Young American Leaders Association (YALA) is a missionary organization. We work together with missionaries, provide biblical teachings at mission fields and local Los Angeles areas.</p><a class="button profile-button" href="http://www.yalamission.com" target="_blank">More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

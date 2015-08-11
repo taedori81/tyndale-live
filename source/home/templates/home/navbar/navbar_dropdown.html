@@ -1,0 +1,9 @@
+{% load tyndale_tags wagtailcore_tags %}
+
+<nav class="w-dropdown-list dropdown-list">
+        <a class="w-dropdown-link dropdown-link" href="{% pageurl parent %}">{{ parent.title }}</a>
+      {% for child in menuitems_children %}
+         <a class="w-dropdown-link dropdown-link" href="{% pageurl child %}">{{ child.title }}</a>
+      {% endfor %}
+</nav>
+
