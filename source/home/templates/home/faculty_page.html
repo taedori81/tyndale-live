@@ -492,7 +492,7 @@
                                       {% for professor in professors %}
                                           {% if professor.course.course_name == course.course_name %}
                                               <div class="w-row faculty-row">
-                                                <div class="w-col w-col-3">
+                                                <div class="w-col w-col-3 blank-col">
                                                   <div class="faculty-image-holder">
                                                       {% image professor.professor_image max-150x200 as professor_image %}
                                                       <img src="{{ professor_image.url }}" alt="">
@@ -523,7 +523,7 @@
                     {% for adjunct_professor in adjunct_professors %}
 
                         <div class="w-row faculty-row">
-                             <div class="w-col w-col-3">
+                             <div class="w-col w-col-3 blank-col">
                                 <div class="faculty-image-holder">
                                     {% image adjunct_professor.professor_image max-150x200 as adjunct_professor_image %}
                                     <img src="{{ adjunct_professor_image.url }}" alt="">

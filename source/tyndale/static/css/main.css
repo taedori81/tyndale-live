@@ -7,7 +7,7 @@
 }
 
 .faculty-tab-link {
-  width: 33.33%;
+  width: 49%;
 }
 
 .faculty-class-tab-link {
@@ -48,3 +48,12 @@ form > p > label {
   margin: 30px auto;
   background-color: transparent;
 }
+
+@media (max-width: 479px){
+    .faculty-tab-link {
+    width: 100%;
+  }
+}
+
+
+
