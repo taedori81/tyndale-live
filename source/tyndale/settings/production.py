@@ -16,7 +16,9 @@ ADMINS = (('Taehwan', 'builtbyevo@gmail.com'),)
 
 # SERVER_EMAIL = 'evo@byevo.com'
 
-ALLOWED_HOSTS = env('ALLOWED_HOSTS')
+ALLOWED_HOSTS = ['.taedori-staging.com',
+                 'localhost']
+
 
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_HOST_USER = env('EMAIL_ADDRESS')
