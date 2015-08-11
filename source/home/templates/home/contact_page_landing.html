@@ -6,5 +6,16 @@
 {% block body_class %}template-{{ self.get_verbose_name|slugify }}{% endblock %}
 
 {% block content %}
-<h1>{{ self.thank_you_text }}</h1>
+<div class="w-section contact-section">
+    <div class="w-widget w-widget-map map" data-widget-latlng="34.0492437,-118.27351699999997" data-widget-style="roadmap" data-widget-zoom="12" data-ix="fade-in"></div>
+    <div class="w-container form-container">
+      <div class="form-container">
+        <h1 class="form-heading" data-ix="slidedown">{{ self.contact_header }}</h1>
+        <div class="separator"></div>
+        <h4 class="form-subheading" data-ix="sdown-load-300">{{ self.contact_subheader }}</h4>
+
+          <h3>{{ self.thank_you_text }}</h3>
+      </div>
+    </div>
+  </div>
 {% endblock %}
