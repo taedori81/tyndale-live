@@ -16,7 +16,7 @@ ADMINS = (('Taehwan', 'builtbyevo@gmail.com'),)
 
 # SERVER_EMAIL = 'evo@byevo.com'
 
-ALLOWED_HOSTS = ['.taedori-staging.com',
+ALLOWED_HOSTS = ['.tyndaleinternationaluniversity.org',
                  'localhost']
 
 
