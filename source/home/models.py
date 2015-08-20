@@ -437,7 +437,7 @@ class AcademicProgramPage(Page):
     @property
     def programs(self):
         programs = AcademicPrograms.objects.all()
-        programs = programs.order_by('program_name')
+        # programs = programs.order_by('program_name')
 
         return programs
 
