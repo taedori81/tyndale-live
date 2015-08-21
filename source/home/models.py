@@ -35,7 +35,7 @@ class AbstractProfessor(models.Model):
                                       help_text="Professor name with maximum length of 30 characters",
                                       default="Professor Name")
     professor_spec = RichTextField(verbose_name=_('Professor Spec'), default="Professor Spec.")
-
+    order_number = models.IntegerField(default=10, blank=False)
     class Meta:
         abstract = True
 
@@ -535,6 +535,7 @@ class FacultyPage(Page):
     @property
     def adjunct_professors(self):
         adjunct_professors = AdjunctProfessor.objects.all()
+        adjunct_professors = adjunct_professors.order_by('order_number')
         return adjunct_professors
 
     content_panels = Page.content_panels + [
